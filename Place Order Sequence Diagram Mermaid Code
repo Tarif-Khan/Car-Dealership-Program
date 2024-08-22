@@ -1,0 +1,14 @@
+Here is the mermaid code for the first important feature - placing an order.
+
+sequenceDiagram
+    participant Customer
+    participant Order
+    participant Vehicle
+    participant Dealership
+
+    Customer->>Order: createOrder(vehicle, dealership)
+    Order->>Vehicle: getInfo()
+    Vehicle-->>Order: vehicleInfo
+    Order->>Dealership: processOrder(order)
+    Dealership->>Order: orderStatus
+    Order-->>Customer: orderConfirmation

@@ -1,0 +1,21 @@
+Here is the third sequence Diagram mermaid code. This one represents updating inventory.
+
+sequenceDiagram
+    participant Dealership
+    participant Inventory
+    participant Vehicle
+
+    Dealership->>Inventory: addVehicle(vehicle)
+    Inventory->>Vehicle: create(vehicleInfo)
+    Vehicle-->>Inventory: success
+    Inventory-->>Dealership: success
+
+    Dealership->>Inventory: removeVehicle(vehicleId)
+    Inventory->>Vehicle: delete(vehicleId)
+    Vehicle-->>Inventory: success
+    Inventory-->>Dealership: success
+
+    Dealership->>Inventory: updateVehicle(vehicleId, updatedInfo)
+    Inventory->>Vehicle: update(vehicleId, updatedInfo)
+    Vehicle-->>Inventory: success
+    Inventory-->>Dealership: success

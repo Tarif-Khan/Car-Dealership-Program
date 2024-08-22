@@ -1,0 +1,80 @@
+Here are the CRC cards for PART1 of HW6. We chose to show the 8 most important classes.
+
++-----------------------------------+-----------------------------------+
+| Class: Vehicle                    | Collaborators:                    |
+|                                   | - Inventory                       |
+| Responsibilities:                 |                                   |
+| - Represent a vehicle with its    |                                   |
+|   attributes                      |                                   |
+| - Provide information about the   |                                   |
+|   vehicle                         |                                   |
++-----------------------------------+-----------------------------------+
+
++-----------------------------------+-----------------------------------+
+| Class: Car                        | Collaborators:                    |
+|                                   | - Inventory                       |
+| Responsibilities:                 |                                   |
+| - Represent a car vehicle         |                                   |
+| - Provide car-specific attributes |                                   |
+|   and behaviors                   |                                   |
++-----------------------------------+-----------------------------------+
+
++-----------------------------------+-----------------------------------+
+| Class: Truck                      | Collaborators:                    |
+|                                   | - Inventory                       |
+| Responsibilities:                 |                                   |
+| - Represent a truck vehicle       |                                   |
+| - Provide truck-specific          |                                   |
+|   attributes and behaviors        |                                   |
++-----------------------------------+-----------------------------------+
+
++-----------------------------------+-----------------------------------+
+| Class: Dealership                 | Collaborators:                    |
+|                                   | - Inventory                       |
+| Responsibilities:                 | - Order                           |
+| - Represent a dealership (online  |                                   |
+|   or physical)                    |                                   |
+| - Manage inventory of vehicles    |                                   |
+| - Process orders from customers   |                                   |
++-----------------------------------+-----------------------------------+
+
++-----------------------------------+-----------------------------------+
+| Class: Inventory                  | Collaborators:                    |
+|                                   | - Vehicle                         |
+| Responsibilities:                 | - Dealership                      |
+| - Manage the inventory of         |                                   |
+|   vehicles for a dealership       |                                   |
+| - Add, remove, and update vehicle |                                   |
+|   information                     |                                   |
++-----------------------------------+-----------------------------------+
+
++-----------------------------------+-----------------------------------+
+| Class: Customer                   | Collaborators:                    |
+|                                   | - Order                           |
+| Responsibilities:                 | - FavoriteList                    |
+| - Represent a customer            |                                   |
+| - Manage customer account and     |                                   |
+|   profile                         |                                   |
+| - Create and manage favorite list |                                   |
+|   of vehicles                     |                                   |
++-----------------------------------+-----------------------------------+
+
++-----------------------------------+-----------------------------------+
+| Class: Order                      | Collaborators:                    |
+|                                   | - Customer                        |
+| Responsibilities:                 | - Vehicle                         |
+| - Represent an order placed by a  | - Dealership                      |
+|   customer                        |                                   |
+| - Manage order details and status |                                   |
+| - Handle delivery options         |                                   |
++-----------------------------------+-----------------------------------+
+
++-----------------------------------+-----------------------------------+
+| Class: FavoriteList               | Collaborators:                    |
+|                                   | - Customer                        |
+| Responsibilities:                 | - Vehicle                         |
+| - Manage the list of favorite     |                                   |
+|   vehicles for a customer         |                                   |
+| - Add and remove vehicles from    |                                   |
+|   the list                        |                                   |
++-----------------------------------+-----------------------------------+

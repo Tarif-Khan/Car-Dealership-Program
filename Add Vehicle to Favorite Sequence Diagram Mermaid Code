@@ -1,0 +1,11 @@
+Here is the second sequence diagram in mermaid code which represents the customer adding a vehicle to the favorite list.
+
+sequenceDiagram
+    participant Customer
+    participant FavoriteList
+    participant Vehicle
+
+    Customer->>FavoriteList: addVehicle(vehicle)
+    FavoriteList->>Vehicle: getInfo()
+    Vehicle-->>FavoriteList: vehicleInfo
+    FavoriteList-->>Customer: success

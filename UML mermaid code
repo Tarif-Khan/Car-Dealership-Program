@@ -1,0 +1,46 @@
+classDiagram
+    Vehicle <|-- Car
+    Vehicle <|-- Truck
+    Dealership "1" *-- "1" Inventory
+    Inventory "1" o-- "*" Vehicle
+    Customer "1" *-- "*" Order
+    Customer "1" *-- "1" FavoriteList
+    FavoriteList "1" o-- "*" Vehicle
+    Order "1" *-- "1" Vehicle
+    Order "1" *-- "1" Dealership
+    class Vehicle {
+        +getInfo(): VehicleInfo
+        +create(vehicleInfo: VehicleInfo): bool
+        +delete(vehicleId: int): bool
+        +update(vehicleId: int, updatedInfo: VehicleInfo): bool
+    }
+    class Car {
+        +getInfo(): VehicleInfo
+    }
+    class Truck {
+        +getInfo(): VehicleInfo
+    }
+    class Dealership {
+        +manageInventory()
+        +processOrder(order: Order): OrderStatus
+    }
+    class Inventory {
+        +addVehicle(vehicle: Vehicle): bool
+        +removeVehicle(vehicleId: int): bool
+        +updateVehicle(vehicleId: int, updatedInfo: VehicleInfo): bool
+    }
+    class Customer {
+        +manageAccount()
+        +manageProfile()
+        +manageFavoriteList()
+        +createOrder(vehicle: Vehicle, dealership: Dealership): Order
+    }
+    class Order {
+        +getOrderConfirmation(): OrderConfirmation
+        +getOrderStatus(): OrderStatus
+        +handleDeliveryOptions()
+    }
+    class FavoriteList {
+        +addVehicle(vehicle: Vehicle): bool
+        +removeVehicle(vehicleId: int): bool
+    }
